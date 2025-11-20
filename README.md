@@ -1,55 +1,18 @@
-# Homework 2 — Flow Execution Engine
+**Operating Systems – Assignments Repository**
 
-## Overview
-This program reads a `.flow` file and executes commands defined as nodes, pipes, concatenations, stderr links, and file components — simulating a mini shell pipeline system.
+This repository contains my submissions for the Operating Systems course.
+Each homework assignment is organized in its own folder following the structure provided by the instructors.
 
-It uses standard Unix calls (`fork()`, `pipe()`, `dup2()`, `exec()`, `waitpid()`) instead of `system()` and matches shell-style output formatting.
+**📁 Contents**
 
----
+homework02/ — Flow Execution Engine
+Implementation of the .flow processing engine using fork, exec, pipe, and file redirection.
 
-## Design & Implementation
-- Parses `.flow` files with components:
-  - **node=** → defines a command to run  
-  - **pipe=** → connects `from` → `to` (can be node or file)  
-  - **concatenate=** → merges multiple parts sequentially  
-  - **file=** → represents a file as source/destination  
-  - **stderr=** → redirects errors from a node to another target  
-- Ignores comments starting with `#` or `//`.  
-- Detects cyclic dependencies and exits cleanly with an error message.  
-- Provides clear error handling for missing files.  
+homework04/ — Parallel Hash Table (Pthreads)
+Multi-threaded hash table implementation using mutexes, spinlocks, and per-bucket locking optimizations.
 
----
+**📌 Notes**
 
-## Build
-```bash
-gcc -Wall -Wextra -O2 -Wno-stringop-truncation -o flow flow.c
+Each homework folder includes its own README.md file with explanations, assumptions, and instructions specific to that assignment.
 
----
-
-## Run Examples
-
-# Basic test
-./flow filecount.flow doit
-
-# Combined pipe
-./flow complicated.flow shenanigan
-
-# File redirection
-./flow your_tests.flow save_ls
-
-Other .flow files such as stderr.flow and fileio.flow can be used for additional testing.
-
----
-
-## Extra Credit
-save_ls → Demonstrates file sink redirection (writes output to file).
-stderr_pipeline → Shows error stream redirection.
-
----
-
-## Assumptions
-Input files follow assignment format exactly.
-No use of system().
-Works in any standard Linux environment (tested on Kali Linux).
-Missing files trigger clear error messages.
-Cyclic dependencies are detected and handled gracefully.
+The PDF report for Homework 4 (as required) is submitted separately on Brightspace.
