@@ -44,11 +44,9 @@ All detailed written answers, graphs, timing tables, and overhead calculations a
 - Improves performance over the global-mutex version.
 
 ### `partner.txt`
-- Contains partnership information (to be filled separately).
-- Not referenced inside this README.
+- Contains partnership information.
 
 ### `hw4_report.pdf`  
-(Must be added by the student before submission.)
 
 Contains:
 - Explanations of lost entries in the unsafe version
@@ -138,7 +136,7 @@ Each program takes **one argument**: the thread count.
 
 ## Thread Counts Used for Plots
 
-As per TA instructions, I used the following:
+As per instructions, I used the following:
 
 ```
 1, 2, 4, 8, 16
