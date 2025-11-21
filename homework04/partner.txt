@@ -1,4 +1,4 @@
-Student01: <Name>
-Student01_NetID: <id-here>
-Student02: <Name>
-Student02_NetID: <id-here>
+Student01: Sahil Shailesh Zunjarrao
+Student01_NetID: sz5175
+Student02: Paxal Dilip Talawat
+Student02_NetID: pt2645
